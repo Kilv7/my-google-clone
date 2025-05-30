@@ -1,0 +1,251 @@
+/* Загальні скидання */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo-white {
+  fill: black;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #202124;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Верхнє меню */
+#header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #202124;
+  font-size: 14px;
+}
+
+#apps .icon_area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+#apps .icon_area:hover {
+  background-color: rgba(60, 64, 67, 0.1); /* світло-сіра прозора */
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28); /* тінь */
+}
+
+.sign-in-btn {
+  background-color: #1a73e8;
+  color: #fff;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Контент */
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 40px 20px;
+}
+
+#logo img {
+  width: 272px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+#search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.search-box-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  padding: 10px 14px;
+  background-color: #fff;
+  box-shadow: none;
+  transition: box-shadow 0.2s;
+}
+
+.search-box-wrapper:hover {
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+}
+
+.search-icon img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+}
+
+#search-box {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 0 10px;
+}
+
+.right-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.right-icons .icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+#button-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px; /* Можна змінити це значення для точного копіювання */
+}
+
+#button-container input[type="submit"] {
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#button-container input[type="submit"]:hover {
+  border: 1px solid #dadce0;
+}
+
+#lucky-btn {
+  border: none;
+  outline: none;
+  background-color: #f8f9fa; /* можна встановити колір кнопки */
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+#lucky-btn:hover {
+  background-color: #e8e9ea; /* колір при наведенні */
+}
+
+#lucky-btn:focus {
+  outline: none;
+}
+
+/* Футер */
+#footer {
+  background-color: #f2f2f2;
+  font-size: 14px;
+  color: #70757a;
+  margin-top: 100px;
+}
+
+.footer-location {
+  padding: 15px 30px;
+  border-bottom: 1px solid #dadce0;
+  color: #000;
+}
+
+.footer-location p {
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  flex-wrap: wrap;
+}
+
+.footer-left ul,
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-left a,
+.footer-right a {
+  text-decoration: none;
+  color: #000;
+}
+
+.footer-left a:hover,
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+    gap: 15px;
+  }
+  
+  .footer-left ul,
+  .footer-right ul {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+  
+  .footer-left ul li,
+  .footer-right ul li {
+    margin: 0;
+  }
+  
+  .footer-location {
+    padding: 10px 20px;
+    text-align: center;
+  }
+}
